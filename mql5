@@ -1,0 +1,93 @@
+
+// NumberSix EA
+// Developer's Site: forexroboteasy.com
+// Development by: Forex Robot Easy Team
+
+// Include necessary libraries
+#include <Trade\Trade.mqh>   // For trading functions
+#include <Pattern\Pattern.mqh>   // For candlestick pattern recognition
+#include <Trend\Trend.mqh>   // For trend detection
+#include <News\News.mqh>   // For news filter
+
+// Define the promotional price and escalation parameters
+#define PROMOTIONAL_PRICE 299.00
+#define ESCALATION_PURCHASES 10
+#define ESCALATION_AMOUNT 50.00
+
+// Define the main function for the NumberSix EA
+void OnStart()
+{
+    // Get the current price of the product
+    double currentPrice = GetProductPrice();
+    
+    // Check if the promotional price is still valid
+    if (currentPrice <= PROMOTIONAL_PRICE)
+    {
+        // Execute the trading strategy
+        ExecuteScalpingStrategy();
+        
+        // Check for candlestick patterns
+        CheckCandlestickPatterns();
+        
+        // Detect trends in the market
+        DetectTrends();
+        
+        // Apply the news filter
+        ApplyNewsFilter();
+    }
+    else
+    {
+        // Display a message indicating the price escalation
+        Print('The price for the NumberSix EA has escalated to $', currentPrice);
+    }
+}
+
+// Function to execute the scalping strategy
+void ExecuteScalpingStrategy()
+{
+    // Implement your scalping strategy here
+    // ...
+    // ...
+    // ...
+    Print('Executing scalping strategy');
+}
+
+// Function to check for candlestick patterns
+void CheckCandlestickPatterns()
+{
+    // Implement your candlestick pattern recognition here
+    // ...
+    // ...
+    // ...
+    Print('Checking candlestick patterns');
+}
+
+// Function to detect trends in the market
+void DetectTrends()
+{
+    // Implement your trend detection mechanism here
+    // ...
+    // ...
+    // ...
+    Print('Detecting trends');
+}
+
+// Function to apply the news filter
+void ApplyNewsFilter()
+{
+    // Implement your news filter mechanism here
+    // ...
+    // ...
+    // ...
+    Print('Applying news filter');
+}
+
+// Function to get the current price of the product
+double GetProductPrice()
+{
+    // Implement the logic to get the current price of the product
+    // ...
+    // ...
+    // ...
+    return 399.00;  // Placeholder value for demonstration purposes
+}
